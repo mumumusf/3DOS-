@@ -95,19 +95,7 @@
    # 安装依赖
    npm install
 
-   # 创建配置文件
-   cat > secret.txt << EOF
-   928e4132802cc0c59896
-   EOF
 
-   cat > token.txt << EOF
-   eyJ0eXAiOiJKV1QiLCJhbGc...（你的完整token）
-   EOF
-
-   cat > proxy.txt << EOF
-   115.126.25.246:49111:JKVXddfTTzOzsdDIy:A8imFPdd4yKclIZpP
-   EOF
-   ```
 
 5. 使用 Screen 运行程序
    ```bash
