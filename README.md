@@ -2,24 +2,11 @@
 
 ## 🎯 功能介绍
 
-<<<<<<< HEAD
 这是一个用于自动化收获3DOS积分的工具，主要功能包括：
 - 多账户管理和自动收获
 - 支持多种代理格式
 - 实时显示收益情况
 - 自动重试和错误处理
-=======
-## ⭐️ 如何加入项目
-
-1. 访问官方注册链接：[Teneo Community Node](https://bit.ly/teneo-community-node)
-2. 输入邀请码：`F8Fnb`
-3. 完成注册并获取 Access Token
-4. 按照下方部署教程运行节点程序
-
-> 💡 提示：注册后请妥善保存您的 Access Token，它将用于节点程序的运行。
-
-## 🔥 功能特点
->>>>>>> 7148831b45dc9b200a350d2b78a05f611d2dca82
 
 ## 📋 运行环境要求
 
@@ -118,7 +105,7 @@
    EOF
 
    cat > proxy.txt << EOF
-   115.126.25.246:49111:JKVXfTTzOzsdDIy:A8imFP4yKclIZpP
+   115.126.25.246:49111:JKVXddfTTzOzsdDIy:A8imFPdd4yKclIZpP
    EOF
    ```
 
@@ -192,30 +179,9 @@
    - API Secret
    - Bearer Token
 
-### 2. 创建配置文件
 
-1. 在程序目录下创建以下文件：
 
-   `secret.txt`: 存放 API Secret
-   ```
-   928e4132802cc0c59896
-   ```
-
-   `token.txt`: 存放 Bearer Token
-   ```
-   eyJ0eXAiOiJKV1QiLCJhbGc...（你的完整token）
-   ```
-
-   `proxy.txt`: 存放代理地址（可选）
-   ```
-   115.126.25.246:49111:JKVXfTTzOzsdDIy:A8imFP4yKclIZpP
-   ```
-
-2. 多账户配置
-   - 每个账户的 Secret 和 Token 分别写在对应文件的新行
-   - Secret 和 Token 的顺序必须一一对应
-
-### 3. 代理配置（可选）
+###2. 代理配置（可选）
 
 支持以下格式：
 ```
@@ -298,6 +264,7 @@ socks5://username:password@ip:port
 
 ---
 由 [@YOYOMYOYOA](https://x.com/YOYOMYOYOA) 用❤️制作
+
 
 
 
