@@ -1,0 +1,16 @@
+{
+    "name": "3dos-auto-bot",
+    "version": "1.0.0",
+    "description": "3DOS多账户自动收获机器人",
+    "type":  "module",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "axios": "^1.6.2",
+      "chalk": "^5.3.0",
+      "https-proxy-agent": "^7.0.2",
+      "socks-proxy-agent": "^8.0.5"
+    }
+} 
