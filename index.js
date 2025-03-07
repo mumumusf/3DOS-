@@ -6,7 +6,7 @@ import chalk from 'chalk';
 import banner from './banner.js';
 import readline from 'readline';
 
-const API_ENDPOINT = 'https://m8k9mykqqj.us-east-1.awsapprunner.com/api/harvest-data';
+const API_ENDPOINT = 'https://api.dashboard.3dos.io/api/profile/api';
 const DASHBOARD_API = 'https://api.dashboard.3dos.io/api/profile/me';
 const DELAY_SECONDS = 60;
 const HARVEST_FILE = 'harvest.json';
@@ -342,14 +342,28 @@ async function getEarningsData(bearerToken, axiosInstance) {
 
 async function sendHarvestedData(apiSecret, url, harvestData, axiosInstance) {
     try {
-        const response = await axiosInstance.post(API_ENDPOINT, {
-            apiSecret,
+        const endpoint = `${API_ENDPOINT}/${apiSecret}`;
+        const response = await axiosInstance.post(endpoint, {
             url: url,
             harvestedData: harvestData
         }, {
             headers: {
-                'Content-Type': 'application/json',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'
+                "accept": "application/json, text/plain, */*",
+                "accept-encoding": "gzip, deflate, br, zstd",
+                "accept-language": "en-US,en;q=0.9",
+                "authorization": `Bearer ${apiSecret}`,
+                "cache-control": "no-cache",
+                "content-type": "application/json",
+                "origin": "https://dashboard.3dos.io",
+                "pragma": "no-cache",
+                "referer": "https://dashboard.3dos.io/register?ref_code=1c744d",
+                "sec-ch-ua": '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": '"Linux"',
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-site",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
             }
         });
         return response.data;
